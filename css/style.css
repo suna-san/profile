@@ -1,0 +1,548 @@
+/*base*/
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 10px;
+}
+
+h1,h2,h3,p,ul,li {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+li { list-style-type: none;}
+a { text-decoration: none; color: #d3c6a6;}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/*-----style-------*/
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.header_logo {
+  position: relative;
+  margin-left: 5em;
+  color: #d1c3a6;
+  font-size: 1rem;
+}
+
+.header_logo h1::before {
+  content: url(../images/site_logo.jpg);
+  position: absolute;
+  top: -5%;
+  left: -75%;
+}
+
+
+.area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+
+/* -- header -- */
+
+.header_logo {
+  width: 100px;
+  height: 50px;
+}
+
+.content_heading {
+  margin-bottom: 4rem;
+}
+
+
+/*--heading--*/
+
+h2 {
+  text-align: center;
+  position: relative;
+  text-align: center;
+}
+
+h2 span {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin: 0 2.5em;
+  padding: 0 1em;
+  background-color: #fff;
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+h2::before {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+/* -- content_text -- */
+
+.content_text {
+  display: block;
+  position: relative;
+  width: 100vw;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.content_text_section {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+#profileDescription {
+  width: 80vw;
+  letter-spacing: normal;
+  line-height: 1.6rem;
+  font-size: 0.8rem;
+  word-wrap: break-word;
+}
+
+/* -- career -- */
+
+.career_bio img {
+  width: 100vw;
+  max-width: 690px;
+}
+
+.skill_heading {
+  vertical-align: middle;
+  background: #d3c6a6;
+  line-height: 3rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  width: 17rem;
+}
+
+.content_profileSkill {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.career_datail {
+  margin-bottom: 2rem;
+}
+
+/* -- skill -- */
+
+.skill_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skillItem {
+  margin-right: 2em;
+}
+
+/* -- hobby -- */
+
+.hobby_chart {
+  position: relative;
+  width: 100vw;
+  max-width: 800px;
+  height: 100vh;
+  background-image: url(../images/hobby_chart.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 2em;
+}
+
+.hobby_chart_icon img{
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+}
+
+#art {
+  bottom: 20%;
+  left: 15%;
+  position: absolute;
+}
+
+#guitar {
+  top: 50%;
+  left: 30%;
+}
+
+#moto {
+  top: 20%;
+  right: 30%;
+}
+
+#run {
+  top: 5%;
+  right: 25%;
+}
+
+#mountain {
+  top: 0;
+  right: 15%;
+}
+
+#photo {
+  top: 20%;
+  left: 48%;
+}
+
+#book {
+  top: 80%;
+  left: 15%;
+}
+
+/*---------footer----------*/
+
+.footer_bg {
+  width: 100vw;
+  background: #d1c3a6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-tumblr, .fa-facebook-f  {
+  flex: auto;
+  color: #fff;
+  padding: 1.5em;
+}
+
+
+/* ------- parts------- */
+
+
+/* -- circle -- */
+.skillCircle {
+	position: relative;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	text-align: center;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.skillCircle::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -60px;
+	width: 120px;
+	height: 120px;
+	transform-origin: right 60px;
+	z-index: 2;
+}
+
+.skillCircle::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 60px;
+	width: 120px;
+	height: 120px;
+	transform-origin: left 60px;
+	z-index: 3;
+}
+
+.skillCircle .circle-inner {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 100px;
+	height: 62px;
+	padding-top: 38px;
+	background: #fff;
+	border-radius: 50%;
+	z-index: 4;
+}
+
+/* need to chage the color at keyframes */
+.circle_html {
+	background: #FF6310;
+}
+.circle_html::before {
+	background: #FFDFCE;
+	animation: rotateCircleLeftHTML 7s linear infinite;
+}
+.circle_html::after {
+	background: #FFDFCE;
+	animation: rotateCircleRightHTML 7s linear infinite
+}
+
+.circle_css {
+	background: #048EB7;
+}
+.circle_css::before {
+	background: #CCE8F0;
+	animation: rotateCircleLeftCSS 7s linear infinite;
+}
+.circle_css::after {
+	background: #CCE8F0;
+	animation: rotateCircleRightCSS 7s linear infinite;
+}
+
+.circle_js {
+	background: #EBD000;
+}
+.circle_js::before {
+	background: #FAF5CB;
+}
+.circle_js::after {
+	background: #FAF5CB;
+	animation: rotateCircleRightJS 7s linear infinite;
+}
+
+.circle_py {
+	background: #7a9cc3;
+}
+.circle_py::before {
+	background: #e5ebf3;
+}
+.circle_py::after {
+	background: #e5ebf3;
+	animation: rotateCircleRightJS 7s linear infinite;
+}
+
+.circle_ps {
+    background: #0743b5;
+}
+.circle_ps::before {
+    background: #cedaf0;
+    animation: rotateCircleLeftPs 7s linear infinite;
+}
+.circle_ps::after {
+    background: #cedaf0;
+    animation: rotateCircleRightPs 7s linear infinite;
+}
+
+
+.circle_ai {
+    background: #ec7001;
+}
+.circle_ai::before {
+    background: #feeadf;
+    animation: rotateCircleLeftAi 7s linear infinite;
+}
+.circle_ai::after {
+    background: #feeadf;
+    animation: rotateCircleRightAi 7s linear infinite;
+}
+
+.circle_lr {
+    background: #048eb7;
+}
+.circle_lr::before {
+    background: #cce8f0;
+    animation: rotateCircleLeftLr 7s linear infinite;
+}
+.circle_lr::after {
+    background: #cce8f0;
+    animation: rotateCircleRightLr 7s linear infinite;
+}
+
+.circle_wr {
+    background: #848379;
+}
+.circle_wr::before {
+    background: #e3e2d5;
+    animation: rotateCircleLeftWr 7s linear infinite;
+}
+.circle_wr::after {
+    background: #e3e2d5;
+    animation: rotateCircleRightWr 7s linear infinite;
+}
+
+/*
+ card flip -----
+
+
+.card-container {
+  -webkit-perspective: 1000;
+}
+.card-container:hover .card-item {
+  -webkit-transform: rotateY(180deg);
+}
+.card-container:hover .card-front {
+  z-index: 1;
+}
+.card-container:hover .card-back {
+  z-index: 2;
+}
+.card-item {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transition: all 0.4s ease-in-out;
+}
+.card-front {
+  position: relative;
+  z-index: 2;
+  -webkit-backface-visibility: hidden;
+}
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: rotateY(180deg);
+}
+*/
+
+/* ----- fadein ----- */
+
+.fadein {
+    opacity : 0.1;
+    transform : translate(0, 50px);
+    transition : all 500ms;
+    }
+
+.fadein.scrollin {
+    opacity : 1;
+    transform : translate(0, 0);
+    }
+
+/* ----- Keyframes ----- */
+@keyframes dropin-icon {
+	from { top: -500px; }
+	to   { top: 0; }
+}
+
+@keyframes rotate-icon {
+	from { transform: rotateY(0deg); }
+	to   { transform: rotateY(360deg); }
+}
+
+@keyframes move-icon {
+	0%   { left: 250px; }
+	50%  { left: 250px; }
+	100% { left: 0; }
+}
+
+@keyframes cutIn {
+	0%   { opacity: 0; }
+	50%  { opacity: 0; }
+	100% { opacity: 1; }
+}
+/*
+.cutInScroll {
+	visibility: visible !important;
+	animation: cutIn 0.5s ease 1;
+}*/
+
+@keyframes cutInCareer {
+	0%   { left: 0; }
+	30%  { left: 900px; }
+	100% { left: 900px; }
+}
+
+@keyframes typing {
+	0%   { width: 0; }
+	50%  { width: 100%; }
+	100% { width: 100%; }
+}
+
+
+@keyframes rotateCircleRightHTML {
+	0%   {
+		transform: rotate(0deg);
+		background: #FFDFCE;
+	}
+	15%  {
+		transform: rotate(180deg);
+		background: #FFDFCE;
+	}
+	15.01% {
+		transform: rotate(360deg);
+		background: #FF6310;
+	}
+	100% {
+		transform: rotate(360deg);
+		background: #FF6310;
+	}
+}
+@keyframes rotateCircleLeftHTML {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(0deg); }
+	18%  { transform: rotate(30deg); }
+	100% { transform: rotate(30deg); }
+}
+
+@keyframes rotateCircleRightCSS {
+	0%   {
+		transform: rotate(0deg);
+		background: #CCE8F0;
+	}
+	15%  {
+		transform: rotate(180deg);
+		background: #CCE8F0;
+	}
+	15.01% {
+		transform: rotate(360deg);
+		background: #048EB7;
+	}
+	100% {
+		transform: rotate(360deg);
+		background: #048EB7;
+	}
+}
+@keyframes rotateCircleLeftCSS {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(0deg); }
+	18%  { transform: rotate(0deg); }
+	100% { transform: rotate(0deg); }
+}
+
+@keyframes rotateCircleRightJS {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(10deg); }
+	100% { transform: rotate(10deg); }
+}
+
+@keyframes rotateCircleRightPY {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(10deg); }
+	100% { transform: rotate(10deg); }
+}
+
+@keyframes rotateCircleRightPs {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(120deg); }
+	100% { transform: rotate(120deg); }
+}
+
+@keyframes rotateCircleRightAi {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(80deg); }
+	100% { transform: rotate(80deg); }
+}
+
+@keyframes rotateCircleRightLr {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(160deg); }
+	100% { transform: rotate(160deg); }
+}
+
+@keyframes rotateCircleRightWr {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(100deg); }
+	100% { transform: rotate(100deg); }
+}
