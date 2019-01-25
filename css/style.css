@@ -109,7 +109,7 @@ h2::before {
   width: 80vw;
   letter-spacing: normal;
   line-height: 1.6rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   word-wrap: break-word;
 }
 
@@ -153,16 +153,47 @@ h2::before {
   margin-right: 2em;
 }
 
-/* -- hobby -- */
+/*--link---*/
+
+.link_area {
+  font-size: 1.6rem;
+  margin-left: 10%;
+}
+
+.link_list li{
+  position: relative;
+  margin-bottom: 4rem;
+
+}
+
+.link_icon {
+  transition: all 0.5s;
+  text-align: center;
+}
+
+.link_icon::before {
+  content: url(../images/icon_photo.png);
+  position: absolute;
+  left: -80px;
+  top: -20px;
+}
+
+.link_icon:hover {
+  opacity: 0.5;
+  transform: scale(1.1, 1.1);
+  border-bottom: 2px solid #d1c3a6;
+}
+
+
 /*
 .hobby_chart {
   position: relative;
-  width: 100vw;
-  max-width: 800px;
-  height: 100vh;
+  width: 400px;
+  height: 360px;
   background-image: url(../images/hobby_chart.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   margin: 0 2em;
 }
 
@@ -371,42 +402,6 @@ h2::before {
     background: #e3e2d5;
     animation: rotateCircleRightWr 7s linear infinite;
 }
-
-/*
- card flip -----
-
-
-.card-container {
-  -webkit-perspective: 1000;
-}
-.card-container:hover .card-item {
-  -webkit-transform: rotateY(180deg);
-}
-.card-container:hover .card-front {
-  z-index: 1;
-}
-.card-container:hover .card-back {
-  z-index: 2;
-}
-.card-item {
-  position: relative;
-  -webkit-transform-style: preserve-3d;
-  transition: all 0.4s ease-in-out;
-}
-.card-front {
-  position: relative;
-  z-index: 2;
-  -webkit-backface-visibility: hidden;
-}
-.card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: rotateY(180deg);
-}
-*/
 
 /* ----- fadein ----- */
 
